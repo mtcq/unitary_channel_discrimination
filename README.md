@@ -30,7 +30,7 @@ The user may impose the restrictions of Parallel, Sequential, Separable, or Gene
 Dual SDP to calculate maximal success probability of discriminating a set of quantum channels when two copies of the channel are available.
 The user may impose the restrictions of Parallel, Sequential, Separable, or General strategies.
 
-- [channel_discrimination_3copies_primal.m](hhttps://github.com/mtcq/unitary_channel_discrimination/blob/main/UnitaryChannelDiscrimination/channel_discrimination_3copies_primal.m):
+- [channel_discrimination_3copies_primal.m](https://github.com/mtcq/unitary_channel_discrimination/blob/main/UnitaryChannelDiscrimination/channel_discrimination_3copies_primal.m):
 Primal SDP to calculate maximal success probability of discriminating a set of quantum channels when three copies of the channel are available.
 The user may impose the restrictions of Parallel, Sequential, or General strategies.
 
