@@ -13,13 +13,13 @@ This is a repository for the code used to calculate the numerical results presen
 The MATLAB code of this repository is: 
 
 
-- [run_example1.m](https://github.com/mtcq/channel_discrimination/blob/main/UnitaryChannelDiscrimination/run_example1.m):
+- [run_example1.m](https://github.com/mtcq/unitary_channel_discrimination/blob/main/UnitaryChannelDiscrimination/run_example1.m):
 Script used to calculate the success probabiltiies presented in Example 1 of the paper.
 
-- [run_example2.m](https://github.com/mtcq/channel_discrimination/blob/main/UnitaryChannelDiscrimination/run_example2.m):
+- [run_example2.m](https://github.com/mtcq/unitary_channel_discrimination/blob/main/UnitaryChannelDiscrimination/run_example2.m):
 Script used to calculate the success probabiltiies presented in Example 2 of the paper.
 
-- [run_example2.m](https://github.com/mtcq/channel_discrimination/blob/main/UnitaryChannelDiscrimination/run_example3.m):
+- [run_example2.m](https://github.com/mtcq/unitary_channel_discrimination/blob/main/UnitaryChannelDiscrimination/run_example3.m):
 Script used to calculate the success probabiltiies presented in Example 3 of the paper.
 
 - [channel_discrimination_2copies_primal.m](hhttps://github.com/mtcq/unitary_channel_discrimination/blob/main/UnitaryChannelDiscrimination/channel_discrimination_2copies_primal.m):
@@ -38,13 +38,13 @@ The user may impose the restrictions of Parallel, Sequential, or General strateg
 Dual SDP to calculate maximal success probability of discriminating a set of quantum channels when three copies of the channel are available.
 The user may impose the restrictions of Parallel, Sequential, or General strategies.
 
-- [TR.m](https://github.com/mtcq/channel_discrimination/blob/main/UnitaryChannelDiscrimination/TR.m):
+- [TR.m](https://github.com/mtcq/unitary_channel_discrimination/blob/main/UnitaryChannelDiscrimination/TR.m):
 Function that implements the trace-and-replace map on matrices.
 
 
 The mathematica code of this repository is: 
 
-- [LoadFunctions.nb](https://github.com/mtcq/channel_discrimination/blob/main/UnitaryChannelDiscrimination/LoadFunctions.nb):
+- [LoadFunctions.nb](https://github.com/mtcq/unitary_channel_discrimination/blob/main/UnitaryChannelDiscrimination/LoadFunctions.nb):
 Notebook used to load important functions.
 
 - [LoadVariablesEx1.nb](https://github.com/mtcq/unitary_channel_discrimination/blob/main/UnitaryChannelDiscrimination/LoadVariablesEx1.nb):
