@@ -22,7 +22,7 @@ Script used to calculate the success probabiltiies presented in Example 2 of the
 - [run_example2.m](https://github.com/mtcq/unitary_channel_discrimination/blob/main/UnitaryChannelDiscrimination/run_example3.m):
 Script used to calculate the success probabiltiies presented in Example 3 of the paper.
 
-- [channel_discrimination_2copies_primal.m](hhttps://github.com/mtcq/unitary_channel_discrimination/blob/main/UnitaryChannelDiscrimination/channel_discrimination_2copies_primal.m):
+- [channel_discrimination_2copies_primal.m](https://github.com/mtcq/unitary_channel_discrimination/blob/main/UnitaryChannelDiscrimination/channel_discrimination_2copies_primal.m):
 Primal SDP to calculate maximal success probability of discriminating a set of quantum channels when two copies of the channel are available.
 The user may impose the restrictions of Parallel, Sequential, Separable, or General strategies.
 
