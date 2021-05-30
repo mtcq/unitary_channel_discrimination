@@ -1,7 +1,9 @@
-## Code to accompany: *[Unitary operation discrimination beyond group representation:Advantages of adaptive and indefinite-causal-order strategies](https://arxiv.org/abs/xxx)*
+## Code to accompany: *[Unitary operation discrimination beyond group structures:
+Advantages of sequential and indefinite-causal-order strategies](https://arxiv.org/abs/xxx)*
 #### Jessica Bavaresco, Mio Murao, and Marco Túlio Quintino
 
-This is a repository for the code used to calculate the numerical results presented in the article "*Unitary operation discrimination beyond group representation:Advantages of adaptive and indefinite-causal-order strategies*, Jessica Bavaresco, Mio Murao, and Marco Túlio Quintino, [arXiv:xxxx.xxxx](https://arxiv.org/abs/xx.xxxx)".
+This is a repository for the code used to calculate the numerical results presented in the article "*Unitary operation discrimination beyond group structures:
+Advantages of sequential and indefinite-causal-order strategies*, Jessica Bavaresco, Mio Murao, and Marco Túlio Quintino, [arXiv:xxxx.xxxx](https://arxiv.org/abs/xx.xxxx)".
 
  MATLAB code requires:
 - [cvx](http://cvxr.com/) - a free MATLAB toolbox for rapid prototyping of optimization problems
@@ -21,9 +23,6 @@ Script used to calculate the success probabiltiies presented in Example 2 of the
 
 - [run_example3.m](https://github.com/mtcq/unitary_channel_discrimination/blob/main/UnitaryChannelDiscrimination/run_example3.m):
 Script used to calculate the success probabiltiies presented in Example 3 of the paper.
-
-- [run_example4.m](https://github.com/mtcq/unitary_channel_discrimination/blob/main/UnitaryChannelDiscrimination/run_example4.m):
-Script used to calculate the success probabiltiies presented in Example 4 of the paper.
 
 - [channel_discrimination_2copies_primal.m](https://github.com/mtcq/unitary_channel_discrimination/blob/main/UnitaryChannelDiscrimination/channel_discrimination_2copies_primal.m):
 Primal SDP to calculate maximal success probability of discriminating a set of quantum channels when two copies of the channel are available.
