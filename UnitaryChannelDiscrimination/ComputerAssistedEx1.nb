@@ -1,0 +1,382 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     16432,        374]
+NotebookOptionsPosition[     15297,        348]
+NotebookOutlinePosition[     15651,        364]
+CellTagsIndexPosition[     15608,        361]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Mathematica", " ", "Notebook", " ", "that", " ", "provides", " ", "exact",
+     " ", "upper", " ", "and", " ", "lower", " ", "bounds", " ", "for", " ", 
+    "the", " ", "channel", " ", "discrimination", " ", "problem"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "Obtain", " ", "exact", " ", "and", " ", "valid", " ", "channels"}], ",", 
+    " ", "testers", ",", " ", 
+    RowBox[{"and", " ", "bounds"}]}], "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"CUpperPar", "=", 
+     RowBox[{"ChannelParOK", "[", "CUpperParMatlab", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"pUpperPar", "=", 
+     RowBox[{
+      RowBox[{"Truncate", "[", 
+       RowBox[{"pUpperParMatlab", ",", "6"}], "]"}], "+", 
+      RowBox[{"1", 
+       StyleBox["/", "Code"], 
+       RowBox[{
+        StyleBox["10", "Code"], "^", "6"}]}]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"TPar", ":=", " ", 
+     RowBox[{"ParTesterOK", "[", "TParMatlab", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Bounds", " ", "for", " ", "the", " ", "PAR", " ", "case"}], 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<Upper bound from Matlab: \>\"", ",", "  ", 
+      RowBox[{"MatrixForm", "[", "pUpperParMatlab", "]"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<Testing the upper bound: \>\"", ",", "  ", 
+      RowBox[{"MatrixForm", "[", "pUpperPar", "]"}], ",", " ", "\"\<=~\>\"", 
+      ",", " ", 
+      RowBox[{"N", "[", "pUpperPar", "]"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"PositiveSemidefiniteMatrixQ", "[", 
+       RowBox[{
+        RowBox[{"pUpperPar", "*", "CUpperPar"}], "-", " ", 
+        RowBox[{
+         RowBox[{"1", "/", "4"}], "*", 
+         RowBox[{"(", 
+          RowBox[{"C1", "\[CircleTimes]", "C1"}], ")"}]}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+      "Print", "[", "\"\<The bound CUpper is respected for C1\>\"", "]"}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{
+      "Print", "[", "\"\<The bound CUpper is NOT respected for C1\>\"", 
+       "]"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"PositiveSemidefiniteMatrixQ", "[", 
+       RowBox[{
+        RowBox[{"pUpperPar", "*", "CUpperPar"}], "-", " ", 
+        RowBox[{
+         RowBox[{"1", "/", "4"}], "*", 
+         RowBox[{"(", 
+          RowBox[{"C2", "\[CircleTimes]", "C2"}], ")"}]}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+      "Print", "[", "\"\<The bound CUpper is respected for C2\>\"", "]"}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{
+      "Print", "[", "\"\<The bound CUpper is NOT respected for C2\>\"", 
+       "]"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"PositiveSemidefiniteMatrixQ", "[", 
+       RowBox[{
+        RowBox[{"pUpperPar", "*", "CUpperPar"}], "-", " ", 
+        RowBox[{
+         RowBox[{"1", "/", "4"}], "*", 
+         RowBox[{"(", 
+          RowBox[{"C3", "\[CircleTimes]", "C3"}], ")"}]}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+      "Print", "[", "\"\<The bound CUpper is respected for C3\>\"", "]"}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{
+      "Print", "[", "\"\<The bound CUpper is NOT respected for C3\>\"", 
+       "]"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"PositiveSemidefiniteMatrixQ", "[", 
+       RowBox[{
+        RowBox[{"pUpperPar", "*", "CUpperPar"}], "-", " ", 
+        RowBox[{
+         RowBox[{"1", "/", "4"}], "*", 
+         RowBox[{"(", 
+          RowBox[{"C4", "\[CircleTimes]", "C4"}], ")"}]}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+      "Print", "[", "\"\<The bound CUpper is respected for C4\>\"", "]"}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{
+      "Print", "[", "\"\<The bound CUpper is NOT respected for C4\>\"", 
+       "]"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<Is CUpperPar is positive semidefinite? \>\"", 
+      RowBox[{"PositiveSemidefiniteMatrixQ", "[", "CUpperPar", "]"}]}], "]"}],
+     ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<The Partial trace of CUpperPar in the output systems is: \>\"", 
+      RowBox[{"MatrixForm", "[", 
+       RowBox[{"PT", "[", 
+        RowBox[{"CUpperPar", ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "0", ",", "1", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"2", ",", "2", ",", "2", ",", "2"}], "}"}]}], "]"}], 
+       "]"}]}], "]"}], ";"}], "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.8118389241219587`*^9, 3.811838976586726*^9}, {
+   3.8118390128046017`*^9, 3.8118390566757936`*^9}, {3.811840115195508*^9, 
+   3.8118401467815113`*^9}, {3.812087046729933*^9, 3.812087265969325*^9}, {
+   3.8120873077120523`*^9, 3.8120874146142883`*^9}, {3.8120874490407352`*^9, 
+   3.812087469087986*^9}, {3.812087517460709*^9, 3.81208751786664*^9}, {
+   3.8120877423635693`*^9, 3.81208774262754*^9}, {3.812087906786725*^9, 
+   3.812087953802925*^9}, {3.812092697290609*^9, 3.812092703530859*^9}, {
+   3.812093889119952*^9, 3.8120939320716467`*^9}, {3.812250316950491*^9, 
+   3.812250318830557*^9}, 3.812254044996567*^9, {3.8247209243403*^9, 
+   3.8247209262056923`*^9}, {3.824720983659803*^9, 3.8247210488079348`*^9}, {
+   3.8247210975012703`*^9, 3.824721117980522*^9}, {3.825329285084775*^9, 
+   3.825329285768902*^9}, {3.825340232713716*^9, 3.82534025347764*^9}, {
+   3.825386762824953*^9, 3.8253867948617067`*^9}, {3.825386834609763*^9, 
+   3.825386968035082*^9}, {3.829902422515896*^9, 3.8299024318724127`*^9}, {
+   3.829904045017617*^9, 3.829904045752262*^9}},
+ CellLabel->
+  "In[288]:=",ExpressionUUID->"6e213b80-284b-4faf-a33e-d1a54d88a9f1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Upper bound from Matlab: \"\>", "\[InvisibleSpace]", 
+   TagBox["0.9571067914870871`",
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]]}],
+  SequenceForm["Upper bound from Matlab: ", 
+   MatrixForm[0.9571067914870871]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.824720738410427*^9, 3.824720895022388*^9, 3.824720926773428*^9, 
+   3.824721053924616*^9, {3.8247211032146683`*^9, 3.824721118427162*^9}, 
+   3.824786502833396*^9, 3.825326339762719*^9, 3.825326420669526*^9, {
+   3.825327126328336*^9, 3.825327138761098*^9}, 3.825329159055251*^9, 
+   3.825329287403021*^9, 3.8253310134311247`*^9, {3.825340217125654*^9, 
+   3.825340258189986*^9}, 3.825386628795532*^9, {3.825386842947912*^9, 
+   3.8253868732625923`*^9}, {3.8253869169619827`*^9, 3.825386969254408*^9}, 
+   3.8253875816502447`*^9, {3.829902403869391*^9, 3.829902432236045*^9}, 
+   3.829903389977292*^9, 3.8299038300983963`*^9, 3.829904047259253*^9, 
+   3.829904109886442*^9, 3.8299043629689417`*^9},
+ CellLabel->
+  "During evaluation of \
+In[288]:=",ExpressionUUID->"96aaade6-d2b0-40bc-ac68-6797b4804f56"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Testing the upper bound: \"\>", "\[InvisibleSpace]", 
+   TagBox[
+    FractionBox["239277", "250000"],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], "\[InvisibleSpace]", "\<\"=~\"\>", 
+   "\[InvisibleSpace]", "0.957108`"}],
+  SequenceForm["Testing the upper bound: ", 
+   MatrixForm[
+    Rational[239277, 250000]], "=~", 0.957108],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.824720738410427*^9, 3.824720895022388*^9, 3.824720926773428*^9, 
+   3.824721053924616*^9, {3.8247211032146683`*^9, 3.824721118427162*^9}, 
+   3.824786502833396*^9, 3.825326339762719*^9, 3.825326420669526*^9, {
+   3.825327126328336*^9, 3.825327138761098*^9}, 3.825329159055251*^9, 
+   3.825329287403021*^9, 3.8253310134311247`*^9, {3.825340217125654*^9, 
+   3.825340258189986*^9}, 3.825386628795532*^9, {3.825386842947912*^9, 
+   3.8253868732625923`*^9}, {3.8253869169619827`*^9, 3.825386969254408*^9}, 
+   3.8253875816502447`*^9, {3.829902403869391*^9, 3.829902432236045*^9}, 
+   3.829903389977292*^9, 3.8299038300983963`*^9, 3.829904047259253*^9, 
+   3.829904109886442*^9, 3.8299043629712257`*^9},
+ CellLabel->
+  "During evaluation of \
+In[288]:=",ExpressionUUID->"b42dae41-5019-4c95-b724-f29864c56e7b"],
+
+Cell[BoxData["\<\"The bound CUpper is respected for C1\"\>"], "Print",
+ CellChangeTimes->{
+  3.824720738410427*^9, 3.824720895022388*^9, 3.824720926773428*^9, 
+   3.824721053924616*^9, {3.8247211032146683`*^9, 3.824721118427162*^9}, 
+   3.824786502833396*^9, 3.825326339762719*^9, 3.825326420669526*^9, {
+   3.825327126328336*^9, 3.825327138761098*^9}, 3.825329159055251*^9, 
+   3.825329287403021*^9, 3.8253310134311247`*^9, {3.825340217125654*^9, 
+   3.825340258189986*^9}, 3.825386628795532*^9, {3.825386842947912*^9, 
+   3.8253868732625923`*^9}, {3.8253869169619827`*^9, 3.825386969254408*^9}, 
+   3.8253875816502447`*^9, {3.829902403869391*^9, 3.829902432236045*^9}, 
+   3.829903389977292*^9, 3.8299038300983963`*^9, 3.829904047259253*^9, 
+   3.829904109886442*^9, 3.829904363318165*^9},
+ CellLabel->
+  "During evaluation of \
+In[288]:=",ExpressionUUID->"36b1d298-9ca1-4c82-be29-d790bbd35467"],
+
+Cell[BoxData["\<\"The bound CUpper is respected for C2\"\>"], "Print",
+ CellChangeTimes->{
+  3.824720738410427*^9, 3.824720895022388*^9, 3.824720926773428*^9, 
+   3.824721053924616*^9, {3.8247211032146683`*^9, 3.824721118427162*^9}, 
+   3.824786502833396*^9, 3.825326339762719*^9, 3.825326420669526*^9, {
+   3.825327126328336*^9, 3.825327138761098*^9}, 3.825329159055251*^9, 
+   3.825329287403021*^9, 3.8253310134311247`*^9, {3.825340217125654*^9, 
+   3.825340258189986*^9}, 3.825386628795532*^9, {3.825386842947912*^9, 
+   3.8253868732625923`*^9}, {3.8253869169619827`*^9, 3.825386969254408*^9}, 
+   3.8253875816502447`*^9, {3.829902403869391*^9, 3.829902432236045*^9}, 
+   3.829903389977292*^9, 3.8299038300983963`*^9, 3.829904047259253*^9, 
+   3.829904109886442*^9, 3.829904363618577*^9},
+ CellLabel->
+  "During evaluation of \
+In[288]:=",ExpressionUUID->"ef697c5a-3e3c-4580-8f63-3ee4422e9847"],
+
+Cell[BoxData["\<\"The bound CUpper is respected for C3\"\>"], "Print",
+ CellChangeTimes->{
+  3.824720738410427*^9, 3.824720895022388*^9, 3.824720926773428*^9, 
+   3.824721053924616*^9, {3.8247211032146683`*^9, 3.824721118427162*^9}, 
+   3.824786502833396*^9, 3.825326339762719*^9, 3.825326420669526*^9, {
+   3.825327126328336*^9, 3.825327138761098*^9}, 3.825329159055251*^9, 
+   3.825329287403021*^9, 3.8253310134311247`*^9, {3.825340217125654*^9, 
+   3.825340258189986*^9}, 3.825386628795532*^9, {3.825386842947912*^9, 
+   3.8253868732625923`*^9}, {3.8253869169619827`*^9, 3.825386969254408*^9}, 
+   3.8253875816502447`*^9, {3.829902403869391*^9, 3.829902432236045*^9}, 
+   3.829903389977292*^9, 3.8299038300983963`*^9, 3.829904047259253*^9, 
+   3.829904109886442*^9, 3.829904363951726*^9},
+ CellLabel->
+  "During evaluation of \
+In[288]:=",ExpressionUUID->"f79801b9-a6bb-4b39-af77-18789aaf988f"],
+
+Cell[BoxData["\<\"The bound CUpper is respected for C4\"\>"], "Print",
+ CellChangeTimes->{
+  3.824720738410427*^9, 3.824720895022388*^9, 3.824720926773428*^9, 
+   3.824721053924616*^9, {3.8247211032146683`*^9, 3.824721118427162*^9}, 
+   3.824786502833396*^9, 3.825326339762719*^9, 3.825326420669526*^9, {
+   3.825327126328336*^9, 3.825327138761098*^9}, 3.825329159055251*^9, 
+   3.825329287403021*^9, 3.8253310134311247`*^9, {3.825340217125654*^9, 
+   3.825340258189986*^9}, 3.825386628795532*^9, {3.825386842947912*^9, 
+   3.8253868732625923`*^9}, {3.8253869169619827`*^9, 3.825386969254408*^9}, 
+   3.8253875816502447`*^9, {3.829902403869391*^9, 3.829902432236045*^9}, 
+   3.829903389977292*^9, 3.8299038300983963`*^9, 3.829904047259253*^9, 
+   3.829904109886442*^9, 3.8299043642507257`*^9},
+ CellLabel->
+  "During evaluation of \
+In[288]:=",ExpressionUUID->"225a3792-fa05-4ff3-83de-a1dabe312416"],
+
+Cell[BoxData[
+ RowBox[{"\<\"Is CUpperPar is positive semidefinite? \"\>", " ", 
+  "True"}]], "Print",
+ CellChangeTimes->{
+  3.824720738410427*^9, 3.824720895022388*^9, 3.824720926773428*^9, 
+   3.824721053924616*^9, {3.8247211032146683`*^9, 3.824721118427162*^9}, 
+   3.824786502833396*^9, 3.825326339762719*^9, 3.825326420669526*^9, {
+   3.825327126328336*^9, 3.825327138761098*^9}, 3.825329159055251*^9, 
+   3.825329287403021*^9, 3.8253310134311247`*^9, {3.825340217125654*^9, 
+   3.825340258189986*^9}, 3.825386628795532*^9, {3.825386842947912*^9, 
+   3.8253868732625923`*^9}, {3.8253869169619827`*^9, 3.825386969254408*^9}, 
+   3.8253875816502447`*^9, {3.829902403869391*^9, 3.829902432236045*^9}, 
+   3.829903389977292*^9, 3.8299038300983963`*^9, 3.829904047259253*^9, 
+   3.829904109886442*^9, 3.829904364592607*^9},
+ CellLabel->
+  "During evaluation of \
+In[288]:=",ExpressionUUID->"54b2188d-f3f5-48ea-9e22-2cdd762f5717"],
+
+Cell[BoxData[
+ RowBox[{"\<\"The Partial trace of CUpperPar in the output systems is: \"\>", 
+  " ", 
+  TagBox[
+   RowBox[{"(", "\[NoBreak]", GridBox[{
+      {"1", "0", "0", "0"},
+      {"0", "1", "0", "0"},
+      {"0", "0", "1", "0"},
+      {"0", "0", "0", "1"}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+        "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.7]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+   Function[BoxForm`e$, 
+    MatrixForm[BoxForm`e$]]]}]], "Print",
+ CellChangeTimes->{
+  3.824720738410427*^9, 3.824720895022388*^9, 3.824720926773428*^9, 
+   3.824721053924616*^9, {3.8247211032146683`*^9, 3.824721118427162*^9}, 
+   3.824786502833396*^9, 3.825326339762719*^9, 3.825326420669526*^9, {
+   3.825327126328336*^9, 3.825327138761098*^9}, 3.825329159055251*^9, 
+   3.825329287403021*^9, 3.8253310134311247`*^9, {3.825340217125654*^9, 
+   3.825340258189986*^9}, 3.825386628795532*^9, {3.825386842947912*^9, 
+   3.8253868732625923`*^9}, {3.8253869169619827`*^9, 3.825386969254408*^9}, 
+   3.8253875816502447`*^9, {3.829902403869391*^9, 3.829902432236045*^9}, 
+   3.829903389977292*^9, 3.8299038300983963`*^9, 3.829904047259253*^9, 
+   3.829904109886442*^9, 3.829904364615451*^9},
+ CellLabel->
+  "During evaluation of \
+In[288]:=",ExpressionUUID->"a8307fb3-19ce-412f-b579-5fa981553900"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1920, 1016},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+Magnification->1.5,
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 6149, 150, 830, "Input",ExpressionUUID->"6e213b80-284b-4faf-a33e-d1a54d88a9f1"],
+Cell[CellGroupData[{
+Cell[6754, 176, 1134, 22, 37, "Print",ExpressionUUID->"96aaade6-d2b0-40bc-ac68-6797b4804f56"],
+Cell[7891, 200, 1249, 25, 58, "Print",ExpressionUUID->"b42dae41-5019-4c95-b724-f29864c56e7b"],
+Cell[9143, 227, 897, 14, 37, "Print",ExpressionUUID->"36b1d298-9ca1-4c82-be29-d790bbd35467"],
+Cell[10043, 243, 897, 14, 37, "Print",ExpressionUUID->"ef697c5a-3e3c-4580-8f63-3ee4422e9847"],
+Cell[10943, 259, 897, 14, 37, "Print",ExpressionUUID->"f79801b9-a6bb-4b39-af77-18789aaf988f"],
+Cell[11843, 275, 899, 14, 37, "Print",ExpressionUUID->"225a3792-fa05-4ff3-83de-a1dabe312416"],
+Cell[12745, 291, 928, 16, 37, "Print",ExpressionUUID->"54b2188d-f3f5-48ea-9e22-2cdd762f5717"],
+Cell[13676, 309, 1593, 35, 107, "Print",ExpressionUUID->"a8307fb3-19ce-412f-b579-5fa981553900"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
