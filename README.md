@@ -1,7 +1,7 @@
 ## Code to accompany: *[Unitary operation discrimination beyond group structures: Advantages of sequential and indefinite-causal-order strategies](https://arxiv.org/abs/xxx)*
 #### Jessica Bavaresco, Mio Murao, and Marco Túlio Quintino
 
-This is a repository for the code used to calculate the numerical results presented in the article "*Unitary operation discrimination beyond group structures: Advantages of sequential and indefinite-causal-order strategies*, Jessica Bavaresco, Mio Murao, and Marco Túlio Quintino, [arXiv:xxxx.xxxx](https://arxiv.org/abs/xx.xxxx)".
+This is a repository for the code used to calculate the numerical results presented in the article "*Unitary operation discrimination beyond group structures: Advantages of sequential and indefinite-causal-order strategies*, Jessica Bavaresco, Mio Murao, and Marco Túlio Quintino, [arXiv:2105.13369](https://arxiv.org/abs/2105.13369)".
 
 
  MATLAB code requires:
