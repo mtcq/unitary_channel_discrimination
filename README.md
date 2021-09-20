@@ -62,4 +62,4 @@ Notebook used to prove results involved in Example 2.
 - [ComputerAssistedEx3.nb](https://github.com/mtcq/unitary_channel_discrimination/blob/main/UnitaryChannelDiscrimination/ComputerAssistedEx3.nb):
 Notebook used to prove results involved in Example 3.
 
-This repository also includes the folders MatlabExample1, MatlabExample3, and MatlabExample3 , which contain important variables used in the computer assited proof written in mathematica notebooks. Note that the MATLAB script creates this folder and all the variables included on it, hence if you run the MATLAB code before the computer assistem mathematica notebook, this folder is not required.
+This repository also includes the folders MatlabExample1, MatlabExample3, and MatlabExample3, which contain important variables used in the computer assisted proof written in mathematica notebooks. Note that the MATLAB script creates this folder and all the variables included on it, hence if you run the MATLAB code before the computer assisted mathematica notebook, this folder is not required.
